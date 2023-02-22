@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4251e4cc-2477-472f-b914-40c75283c19b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Project-3/build.sh" beforeDir="false" afterPath="$PROJECT_DIR$/Project-3/build.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project-3/docs/build/doctrees/environment.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/Project-3/docs/build/doctrees/environment.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project-3/docs/build/doctrees/index.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/Project-3/docs/build/doctrees/index.doctree" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project-3/docs/build/doctrees/install.doctree" beforeDir="false" afterPath="$PROJECT_DIR$/Project-3/docs/build/doctrees/install.doctree" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project-3/docs/build/doctrees/testing.doctree" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project-3/docs/build/html/.buildinfo" beforeDir="false" afterPath="$PROJECT_DIR$/Project-3/docs/build/html/.buildinfo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project-3/docs/build/html/_sources/index.rst.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Project-3/docs/build/html/_sources/index.rst.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project-3/docs/build/html/_sources/install.rst.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Project-3/docs/build/html/_sources/install.rst.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project-3/docs/build/html/_sources/testing.rst.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project-3/docs/build/html/genindex.html" beforeDir="false" afterPath="$PROJECT_DIR$/Project-3/docs/build/html/genindex.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project-3/docs/build/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Project-3/docs/build/html/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project-3/docs/build/html/install.html" beforeDir="false" afterPath="$PROJECT_DIR$/Project-3/docs/build/html/install.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project-3/docs/build/html/objects.inv" beforeDir="false" afterPath="$PROJECT_DIR$/Project-3/docs/build/html/objects.inv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project-3/docs/build/html/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/Project-3/docs/build/html/search.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project-3/docs/build/html/searchindex.js" beforeDir="false" afterPath="$PROJECT_DIR$/Project-3/docs/build/html/searchindex.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project-3/docs/build/html/testing.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project-3/docs/source/conf.py" beforeDir="false" afterPath="$PROJECT_DIR$/Project-3/docs/source/conf.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project-3/docs/source/function.rst" beforeDir="false" afterPath="$PROJECT_DIR$/Project-3/docs/source/function.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project-3/docs/source/index.rst" beforeDir="false" afterPath="$PROJECT_DIR$/Project-3/docs/source/index.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project-3/docs/source/install.rst" beforeDir="false" afterPath="$PROJECT_DIR$/Project-3/docs/source/install.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/midterm/practice_1/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midterm/practice_1/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midterm/practice_1/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midterm/practice_1/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midterm/practice_1/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midterm/practice_1/.idea/practice_1.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midterm/practice_1/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midterm/practice_1/Pipfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midterm/practice_1/Pipfile.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midterm/practice_1/build.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midterm/practice_1/src/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midterm/practice_1/src/student.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midterm/practice_1/students.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midterm/practice_1/tests/context.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midterm/practice_1/tests/test_main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/midterm_fa_2022/data/team_roster.json" beforeDir="false" afterPath="$PROJECT_DIR$/midterm_fa_2022/data/team_roster.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/midterm_fa_2022/src/roster.py" beforeDir="false" afterPath="$PROJECT_DIR$/midterm_fa_2022/src/roster.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2GhHx3IkjeaTxshHR3zqavyJCeX" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "/Users/veera/Desktop/Git/Python_Projects"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4251e4cc-2477-472f-b914-40c75283c19b" name="Changes" comment="" />
+      <created>1666834138685</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1666834138685</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
