@@ -12,3 +12,8 @@ def assign_values1():
     b = 7
     c = 8
     return [a, b, c]
+
+
+@pytest.fixture()
+def supply_url():       # Supplies url when ever mentioned in the test case.
+    return "https://regres.in/api"
