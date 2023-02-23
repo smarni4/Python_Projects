@@ -12,11 +12,13 @@ def raise_error():
     raise SystemExit("print raised an error")
 
 
+@pytest.mark.basic
 @pytest.mark.odd  # mark function helps to run partial tests in the file, Here we used odd and even as markers.
 def test_case1_1():
     assert inc(4) == 6, "test failed"
 
 
+@pytest.mark.basic
 @pytest.mark.even
 def test_case1_2():
     with pytest.raises(SystemExit):
@@ -53,11 +55,13 @@ def test_case1_5():
     
     --dist loadfile : Tests are grouped by their containing file. Groups are distributed to available
                       workers as whole units
+    
+        Example command: pytest -k test_ --dist loadfile test_1.py test_2.py test_3_api.py
 
     --dist loadgroup : Tests are grouped by the xdist_group mark. Groups are distributed to available
                        workers as whole units.
     
-    Example command:  pytest test1.py --dist loadgroup group1 '''
+        Example command:  pytest test_1.py --dist loadgroup group1 '''
 
 
 @pytest.mark.xdist_group('group1')
@@ -130,5 +134,5 @@ def test_case1_14():
 
 '''
 To generate a xml file for the test results run the command
-    pytest <test_file> -v --junitxml="<xml_file_name" 
+    pytest <test_file> -v --junitxml="<xml_file_name>" 
 '''

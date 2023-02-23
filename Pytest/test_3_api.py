@@ -10,6 +10,7 @@ import requests
 import json
 
 
+@pytest.mark.users
 @pytest.mark.parametrize("userid, first_name", [(7, 'Michael'), (8, 'Lindsay')])    # Runs test for the given two inputs
 def test_valid_users(supply_url, userid, first_name):       # used fixture from the conftest file
     url = supply_url + '/users/' + str(userid)
@@ -21,7 +22,18 @@ def test_valid_users(supply_url, userid, first_name):       # used fixture from 
     assert j['data']['first_name'] == first_name, resp.text
 
 
+@pytest.mark.users
 def test_invalid_users(supply_url):
     url = supply_url + '/users/50'
     resp = requests.get(url)
     assert resp.status_code == 404, resp.text
+
+
+player_id_list = ['1', '3', '2', '4', '5']
+
+
+@pytest.mark.players
+@pytest.mark.parametrize('player_id', player_id_list)
+def test_read_player(read_player, player_id):
+    # resp = read_player(player_id)
+    assert read_player["Code"] == 200, 'player not found'
