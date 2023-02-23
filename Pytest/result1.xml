@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="5" skipped="3" tests="15" time="0.131" timestamp="2023-02-23T11:52:45.157419" hostname="veeras-MBP"><testcase classname="test1" name="test_case1_1" time="0.001"><failure message="AssertionError: test failed&#10;assert 5 == 6&#10; +  where 5 = inc(4)">@pytest.mark.odd  # mark function helps to run partial tests in the file, Here we used odd and even as markers.
+    def test_case1_1():
+&gt;       assert inc(4) == 6, "test failed"
+E       AssertionError: test failed
+E       assert 5 == 6
+E        +  where 5 = inc(4)
+
+test1.py:17: AssertionError</failure></testcase><testcase classname="test1" name="test_case1_2" time="0.001" /><testcase classname="test1.TestClass" name="test_case1_3" time="0.001" /><testcase classname="test1.TestClass" name="test_case1_4" time="0.001" /><testcase classname="test1" name="test_case1_5" time="0.002" /><testcase classname="test1" name="test_case1_6" time="0.001"><failure message="AssertionError: group1 test_case&#10;assert (4 + 1) == 6">@pytest.mark.xdist_group('group1')
+    def test_case1_6():
+        x = 4
+&gt;       assert x+1 == 6, 'group1 test_case'
+E       AssertionError: group1 test_case
+E       assert (4 + 1) == 6
+
+test1.py:66: AssertionError</failure></testcase><testcase classname="test1" name="test_case1_7" time="0.001" /><testcase classname="test1" name="test_case1_8" time="0.001"><failure message="AssertionError: group1 test_case&#10;assert (8 + 2) == 9">@pytest.mark.xdist_group('group1')
+    def test_case1_8():
+        x = 8
+&gt;       assert x+2 == 9, 'group1 test_case'
+E       AssertionError: group1 test_case
+E       assert (8 + 2) == 9
+
+test1.py:78: AssertionError</failure></testcase><testcase classname="test1" name="test_case1_9" time="0.001"><failure message="AssertionError: group2 test_case&#10;assert (10 * 10) == 110">@pytest.mark.xdist_group('group2')
+    def test_case1_9():
+        x = 10
+&gt;       assert x*10 == 110, 'group2 test_case'
+E       AssertionError: group2 test_case
+E       assert (10 * 10) == 110
+
+test1.py:84: AssertionError</failure></testcase><testcase classname="test1" name="test_case1_10[5-3-8]" time="0.001" /><testcase classname="test1" name="test_case1_10[7-0-17]" time="0.001"><failure message="AssertionError: test failed&#10;assert (7 + 0) == 17">input1 = 7, input2 = 0, output = 17
+
+    @pytest.mark.parametrize("input1, input2, output", [(5, 3, 8), (7, 0, 17)])
+    def test_case1_10(input1, input2, output):
+&gt;       assert input1+input2 == output, 'test failed'
+E       AssertionError: test failed
+E       assert (7 + 0) == 17
+
+test1.py:98: AssertionError</failure></testcase><testcase classname="test1" name="test_case1_11" time="0.001"><skipped type="pytest.skip" message="unconditional skip">/Users/veera/Desktop/Git/Python_Projects/Pytest/test1.py:111: unconditional skip</skipped></testcase><testcase classname="test1" name="test_case1_12" time="0.001"><skipped type="pytest.skip" message="unconditional skip">/Users/veera/Desktop/Git/Python_Projects/Pytest/test1.py:116: unconditional skip</skipped></testcase><testcase classname="test1" name="test_case1_13" time="0.001" /><testcase classname="test1" name="test_case1_14" time="0.001"><skipped type="pytest.xfail" message="" /></testcase></testsuite></testsuites>
