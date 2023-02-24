@@ -76,13 +76,13 @@ def test_case1_7():
     assert x+1 == 6, 'group2 test_case'
 
 
-@pytest.mark.xdist_group('group1')
+@pytest.mark.xdist_group(name="group1")
 def test_case1_8():
     x = 8
     assert x+2 == 9, 'group1 test_case'
 
 
-@pytest.mark.xdist_group('group2')
+@pytest.mark.xdist_group(name="group2")
 def test_case1_9():
     x = 10
     assert x*10 == 110, 'group2 test_case'
