@@ -4,6 +4,7 @@ some tests for listing some users and login with users.
 
 To do that, first we need to create a fixture inside conftest file which will supply base url for all the tests.
 """
+import random
 
 import pytest
 import requests
@@ -37,3 +38,19 @@ player_id_list = ['1', '3', '2', '4', '5']
 def test_read_player(read_player, player_id):
     # resp = read_player(player_id)
     assert read_player["Code"] == 200, 'player not found'
+
+
+def get_joke():
+    url = 'http://icanhazdadjoke.com/search'
+    # term = input("Let me tell you a joke, choose a topic:")
+    response = requests.get(url, headers={"Accept": "application/json"})
+    if response.status_code == 200 and response.json()['results']:
+        results = response.json()["results"]
+        joke = random.choice(results)['joke']
+    else:
+        joke = 'No jokes'
+    return joke
+
+
+def len_joke():
+    return len(get_joke())
