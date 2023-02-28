@@ -54,3 +54,9 @@ def get_joke():
 
 def len_joke():
     return len(get_joke())
+
+
+def get_json(url):
+    """Takes a url and returns json."""
+    r = requests.get(url)
+    return r.json()

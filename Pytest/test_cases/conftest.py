@@ -7,6 +7,7 @@ import pytest
 
 import data_file
 import test_3_api
+import test_4_mock
 
 
 @pytest.fixture()
@@ -18,7 +19,7 @@ def assign_values1():
 
 
 @pytest.fixture()
-def supply_url():       # Supplies url when ever mentioned in the test case.
+def supply_url():  # Supplies url when ever mentioned in the test case.
     return "https://regres.in/api"
 
 
@@ -31,3 +32,11 @@ def read_player(player_id):
                 'Message': 'Player found'
                 }
     return {'Code': 400, 'Message': 'Player does not exist.'}
+
+
+@pytest.fixture()
+def mock_response(monkeypatch):
+    def mock_get(*args, **kwargs):
+        return test_4_mock.MockResponse()
+
+    monkeypatch.setattr(test_3_api.requests, 'get', mock_get)
