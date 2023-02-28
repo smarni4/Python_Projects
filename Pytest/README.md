@@ -1,6 +1,6 @@
 In this PyTest tutorial, we covered
 
-* Install pytest using pip install pytest=2.9.1
+* Install pytest using pip install pytest
 * Simple pytest program and run it with py.test command.
 * Assertion statements, assert x==y, will return either True or False.
 * How pytest identifies test files and methods.
