@@ -100,16 +100,16 @@ def test_can_list_tasks():
 
 
 task_ids = [
-    ("task_4853e3a339564210ba9035edaac32dbd"),
-     ("task_051c51104e004e598aa8004c2f080bc4"),
-      ("task_0ece6633af9448f48bde3fc6e73ebdcb"),
-       ("task_e1bf69910eeb480fb41f6de5179a8bff"),
-        ("task_b71fb9097aae4fecb5e81bc5677d1263"),
-         ("task_6a1277d833444d7f81c92267bc1f1207"),
-    ("task_970d27f21ad34aa9847152181bd86c34"),
-     ("task_970d27f21ad34aa9847152181bd86c34"),
-      ("task_2f5590ded6c644e38a97ec09d49594ab"),
-       ("task_7445ec442c80458baac4586b7116d88d")]
+    "task_4853e3a339564210ba9035edaac32dbd",
+    "task_051c51104e004e598aa8004c2f080bc4",
+    "task_0ece6633af9448f48bde3fc6e73ebdcb",
+    "task_e1bf69910eeb480fb41f6de5179a8bff",
+    "task_b71fb9097aae4fecb5e81bc5677d1263",
+    "task_6a1277d833444d7f81c92267bc1f1207",
+    "task_970d27f21ad34aa9847152181bd86c34",
+    "task_970d27f21ad34aa9847152181bd86c34",
+    "task_2f5590ded6c644e38a97ec09d49594ab",
+    "task_7445ec442c80458baac4586b7116d88d"]
 
 
 @pytest.mark.parametrize("task_id", task_ids)
@@ -125,6 +125,3 @@ def test_can_delete_task(task_id):
 
     get_task_response = get_task(task_id)
     assert get_task_response.status_code == 404, 'Task is not deleted'
-
-
-
