@@ -30,6 +30,7 @@ class TestClass:
 
     @pytest.mark.odd
     def test_case1_3(self):
+        """ Test case 3"""
         assert 'h' in self.x
 
     @pytest.mark.even
