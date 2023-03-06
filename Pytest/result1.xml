@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="13" skipped="3" tests="26" time="1.294" timestamp="2023-02-23T15:35:09.172697" hostname="veeras-MBP"><testcase classname="test_1" name="test_case1_1" time="0.001"><failure message="AssertionError: test failed&#10;assert 5 == 6&#10; +  where 5 = inc(4)">@pytest.mark.basic
+    @pytest.mark.odd  # mark function helps to run partial tests in the file, Here we used odd and even as markers.
+    def test_case1_1():
+&gt;       assert inc(4) == 6, "test failed"
+E       AssertionError: test failed
+E       assert 5 == 6
+E        +  where 5 = inc(4)
+
+test_1.py:18: AssertionError</failure></testcase><testcase classname="test_1" name="test_case1_2" time="0.001" /><testcase classname="test_1.TestClass" name="test_case1_3" time="0.001" /><testcase classname="test_1.TestClass" name="test_case1_4" time="0.001" /><testcase classname="test_1" name="test_case1_5" time="0.001" /><testcase classname="test_1" name="test_case1_6" time="0.003"><failure message="AssertionError: group1 test_case&#10;assert (4 + 1) == 6">@pytest.mark.basic
+    @pytest.mark.xdist_group('group1')
+    def test_case1_6():
+        x = 4
+&gt;       assert x+1 == 6, 'group1 test_case'
+E       AssertionError: group1 test_case
+E       assert (4 + 1) == 6
+
+test_1.py:69: AssertionError</failure></testcase><testcase classname="test_1" name="test_case1_7" time="0.001" /><testcase classname="test_1" name="test_case1_8" time="0.001"><failure message="AssertionError: group1 test_case&#10;assert (8 + 2) == 9">@pytest.mark.basic
+    @pytest.mark.xdist_group('group1')
+    def test_case1_8():
+        x = 8
+&gt;       assert x+2 == 9, 'group1 test_case'
+E       AssertionError: group1 test_case
+E       assert (8 + 2) == 9
+
+test_1.py:83: AssertionError</failure></testcase><testcase classname="test_1" name="test_case1_9" time="0.001"><failure message="AssertionError: group2 test_case&#10;assert (10 * 10) == 110">@pytest.mark.basic
+    @pytest.mark.xdist_group('group2')
+    def test_case1_9():
+        x = 10
+&gt;       assert x*10 == 110, 'group2 test_case'
+E       AssertionError: group2 test_case
+E       assert (10 * 10) == 110
+
+test_1.py:90: AssertionError</failure></testcase><testcase classname="test_1" name="test_case1_10[5-3-8]" time="0.001" /><testcase classname="test_1" name="test_case1_10[7-0-17]" time="0.002"><failure message="AssertionError: test failed&#10;assert (7 + 0) == 17">input1 = 7, input2 = 0, output = 17
+
+    @pytest.mark.parametrize("input1, input2, output", [(5, 3, 8), (7, 0, 17)])
+    def test_case1_10(input1, input2, output):
+&gt;       assert input1+input2 == output, 'test failed'
+E       AssertionError: test failed
+E       assert (7 + 0) == 17
+
+test_1.py:104: AssertionError</failure></testcase><testcase classname="test_1" name="test_case1_11" time="0.001"><skipped type="pytest.skip" message="unconditional skip">/Users/veera/Desktop/Git/Python_Projects/Pytest/test_1.py:117: unconditional skip</skipped></testcase><testcase classname="test_1" name="test_case1_12" time="0.001"><skipped type="pytest.skip" message="unconditional skip">/Users/veera/Desktop/Git/Python_Projects/Pytest/test_1.py:122: unconditional skip</skipped></testcase><testcase classname="test_1" name="test_case1_13" time="0.002" /><testcase classname="test_1" name="test_case1_14" time="0.001"><skipped type="pytest.xfail" message="" /></testcase><testcase classname="test_2" name="test_case2_1" time="0.002"><failure message="AssertionError: assign_values[0] is not equal to 6.&#10;assert 5 == 6">assign_values = [5, 6, 7]
+
+    def test_case2_1(assign_values):
+&gt;       assert assign_values[0] == 6, 'assign_values[0] is not equal to 6.'
+E       AssertionError: assign_values[0] is not equal to 6.
+E       assert 5 == 6
+
+test_2.py:24: AssertionError</failure></testcase><testcase classname="test_2" name="test_case2_2" time="0.003"><failure message="AssertionError: assign_values1[0] is not equal to 6.&#10;assert 6 == 7">assign_values1 = [6, 7, 8]
+
+    def test_case2_2(assign_values1):       # fixture inside the conftest file.
+&gt;       assert assign_values1[0] == 7, 'assign_values1[0] is not equal to 6.'
+E       AssertionError: assign_values1[0] is not equal to 6.
+E       assert 6 == 7
+
+test_2.py:28: AssertionError</failure></testcase><testcase classname="test_2" name="test_case2_3" time="0.002"><failure message="AssertionError: assign_values[0] is less than 6.&#10;assert 5 &gt; 6">assign_values = [5, 6, 7]
+
+    def test_case2_3(assign_values):
+&gt;       assert assign_values[0] &gt; 6, 'assign_values[0] is less than 6.'
+E       AssertionError: assign_values[0] is less than 6.
+E       assert 5 &gt; 6
+
+test_2.py:32: AssertionError</failure></testcase><testcase classname="test_3_api" name="test_valid_users[7-Michael]" time="0.443"><failure message="json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)">supply_url = 'https://regres.in/api', userid = 7, first_name = 'Michael'
+
+    @pytest.mark.users
+    @pytest.mark.parametrize("userid, first_name", [(7, 'Michael'), (8, 'Lindsay')])    # Runs test for the given two inputs
+    def test_valid_users(supply_url, userid, first_name):       # used fixture from the conftest file
+        url = supply_url + '/users/' + str(userid)
+        resp = requests.get(url)
+        print(resp.text)
+&gt;       j = json.loads(resp.text)
+
+test_3_api.py:19: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+../../../../opt/anaconda3/lib/python3.9/json/__init__.py:346: in loads
+    return _default_decoder.decode(s)
+../../../../opt/anaconda3/lib/python3.9/json/decoder.py:337: in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;json.decoder.JSONDecoder object at 0x7fa456ec5550&gt;, s = '', idx = 0
+
+    def raw_decode(self, s, idx=0):
+        """Decode a JSON document from ``s`` (a ``str`` beginning with
+        a JSON document) and return a 2-tuple of the Python
+        representation and the index in ``s`` where the document ended.
+    
+        This can be used to decode a JSON document from a string that may
+        have extraneous data at the end.
+    
+        """
+        try:
+            obj, end = self.scan_once(s, idx)
+        except StopIteration as err:
+&gt;           raise JSONDecodeError("Expecting value", s, err.value) from None
+E           json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+../../../../opt/anaconda3/lib/python3.9/json/decoder.py:355: JSONDecodeError</failure></testcase><testcase classname="test_3_api" name="test_valid_users[8-Lindsay]" time="0.271"><failure message="json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)">supply_url = 'https://regres.in/api', userid = 8, first_name = 'Lindsay'
+
+    @pytest.mark.users
+    @pytest.mark.parametrize("userid, first_name", [(7, 'Michael'), (8, 'Lindsay')])    # Runs test for the given two inputs
+    def test_valid_users(supply_url, userid, first_name):       # used fixture from the conftest file
+        url = supply_url + '/users/' + str(userid)
+        resp = requests.get(url)
+        print(resp.text)
+&gt;       j = json.loads(resp.text)
+
+test_3_api.py:19: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+../../../../opt/anaconda3/lib/python3.9/json/__init__.py:346: in loads
+    return _default_decoder.decode(s)
+../../../../opt/anaconda3/lib/python3.9/json/decoder.py:337: in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;json.decoder.JSONDecoder object at 0x7fa456ec5550&gt;, s = '', idx = 0
+
+    def raw_decode(self, s, idx=0):
+        """Decode a JSON document from ``s`` (a ``str`` beginning with
+        a JSON document) and return a 2-tuple of the Python
+        representation and the index in ``s`` where the document ended.
+    
+        This can be used to decode a JSON document from a string that may
+        have extraneous data at the end.
+    
+        """
+        try:
+            obj, end = self.scan_once(s, idx)
+        except StopIteration as err:
+&gt;           raise JSONDecodeError("Expecting value", s, err.value) from None
+E           json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+../../../../opt/anaconda3/lib/python3.9/json/decoder.py:355: JSONDecodeError</failure></testcase><testcase classname="test_3_api" name="test_invalid_users" time="0.266"><failure message="AssertionError: &#10;assert 200 == 404&#10; +  where 200 = &lt;Response [200]&gt;.status_code">supply_url = 'https://regres.in/api'
+
+    @pytest.mark.users
+    def test_invalid_users(supply_url):
+        url = supply_url + '/users/50'
+        resp = requests.get(url)
+&gt;       assert resp.status_code == 404, resp.text
+E       AssertionError: 
+E       assert 200 == 404
+E        +  where 200 = &lt;Response [200]&gt;.status_code
+
+test_3_api.py:29: AssertionError</failure></testcase><testcase classname="test_3_api" name="test_read_player[1]" time="0.001" /><testcase classname="test_3_api" name="test_read_player[3]" time="0.003" /><testcase classname="test_3_api" name="test_read_player[2]" time="0.001" /><testcase classname="test_3_api" name="test_read_player[4]" time="0.001"><failure message="AssertionError: player not found&#10;assert 400 == 200">read_player = {'Code': 400, 'Message': 'Player does not exist.'}, player_id = '4'
+
+    @pytest.mark.players
+    @pytest.mark.parametrize('player_id', player_id_list)
+    def test_read_player(read_player, player_id):
+        # resp = read_player(player_id)
+&gt;       assert read_player["Code"] == 200, 'player not found'
+E       AssertionError: player not found
+E       assert 400 == 200
+
+test_3_api.py:39: AssertionError</failure></testcase><testcase classname="test_3_api" name="test_read_player[5]" time="0.001"><failure message="AssertionError: player not found&#10;assert 400 == 200">read_player = {'Code': 400, 'Message': 'Player does not exist.'}, player_id = '5'
+
+    @pytest.mark.players
+    @pytest.mark.parametrize('player_id', player_id_list)
+    def test_read_player(read_player, player_id):
+        # resp = read_player(player_id)
+&gt;       assert read_player["Code"] == 200, 'player not found'
+E       AssertionError: player not found
+E       assert 400 == 200
+
+test_3_api.py:39: AssertionError</failure></testcase></testsuite></testsuites>
