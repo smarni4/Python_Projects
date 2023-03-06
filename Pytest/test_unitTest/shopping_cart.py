@@ -45,4 +45,3 @@ class ShoppingCart:
 # print(cart.size())
 # print(cart.get_item('Onion'))
 # print(cart.get_total_price({'Apple': 20, 'Onion': 10}))
-

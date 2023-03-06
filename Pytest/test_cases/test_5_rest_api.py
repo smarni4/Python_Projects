@@ -1,5 +1,5 @@
 import requests
-import uuid
+# import uuid
 import pytest
 
 """ Link to the youtube video : https://www.youtube.com/watch?v=7dgQRVqF1N0. The endpoint we are using in this section

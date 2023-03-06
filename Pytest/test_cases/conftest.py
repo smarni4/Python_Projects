@@ -36,7 +36,7 @@ def read_player(player_id):
 
 @pytest.fixture()
 def mock_response(monkeypatch):
-    def mock_get(*args, **kwargs):
+    def mock_get():
         return test_4_mock.MockResponse()
 
     monkeypatch.setattr(test_3_api.requests, 'get', mock_get)

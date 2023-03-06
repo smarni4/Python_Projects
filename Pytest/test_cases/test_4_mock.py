@@ -32,7 +32,7 @@ def func1():
 
 # print(func1())
 
-func1 = lambda: 10
+# func1 = lambda: 10
 
 
 # print(func1())
@@ -74,7 +74,7 @@ class MockResponse:
 def test_get_json(monkeypatch):
 
     # Any argument may pass to the mock_get function only the MockResponse.json method will be called.
-    def mock_get(*args, **kwargs):
+    def mock_get():
         return MockResponse()
 
     # apply monkeypatch to the requests.get method. When ever requests.get called it returns mock_get() method
