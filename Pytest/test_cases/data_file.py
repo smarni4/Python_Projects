@@ -26,12 +26,11 @@ class Student:
         return date.today().year - int(birth_date[0]) - int((date.today().month, date.today().day) <
                                                             (int(birth_date[1]), int(birth_date[2])))
 
-    # def add_credit(self, subject: str, value: float):
-    #     self.courses[subject] = value
-    #     self.credits += value
+    def add_credit(self, subject: str, value: float):
+        self.courses[subject] = value
+        self.credits += value
 
     def get_credits(self):
-        # print(self.courses)
         return self.courses
 
     def delete_credits(self, course):
@@ -45,13 +44,10 @@ def get_topper(students_list):
     score = 0.0
     stu_name = None
     for student in students_list:
-        print(student)
         stu_score = list(student.get_credits().values())
-        print(stu_score)
         if float(stu_score[0]) > score:
             score = stu_score[0]
             stu_name = student.get_name()
-            print(stu_name)
 
     return stu_name, score
 

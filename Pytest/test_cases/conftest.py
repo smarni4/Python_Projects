@@ -50,15 +50,9 @@ def mock_response(monkeypatch):
 """
 
 
-# @pytest.fixture(scope="class")    # Before using the fixture factory
-# def student_object():
-#     s = Student('Veera', '1999/02/15', 'IT')
-#     return s
-
-
-@pytest.fixture
+@pytest.fixture(scope='class')
 def student_object():
-    s = Student('Veera', '1998/08/15', 'IT', ('Python', 4.0))
+    s = Student('Veera', '1998/08/15', 'IT', ('Python', 3.0))
     return s
 
 

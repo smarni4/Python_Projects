@@ -2,7 +2,7 @@ import json
 import os
 import pytest
 
-from data_file import save_dict, get_topper
+from data_file import save_dict, get_topper, students
 
 """
 Pytest Fixture:
@@ -106,15 +106,16 @@ def test_case2_4(capsys, tmpdir='../testfolder'):  # We can assign the temporary
 
 class Test_student:
     """  Using fixture scope """
-    # def test_case2_5(self, student_object):  # Student class test
-    #     assert student_object.get_age() == 24, 'Age function is not working'
+    def test_case2_5(self, student_object):  # Student class test
+        assert student_object.get_age() == 24, 'Age function is not working'
 
-    # def test_case2_6(self, student_object):
-    #     assert student_object.get_credits() == {}
+    def test_case2_6(self, student_object):
 
-    # def test_case2_7(self, student_object):
-    #     student_object.add_credit('Python', 4.0)
-    #     assert student_object.get_credits() == {'Python': 4.0}, 'Get credits is not working'
+        assert student_object.get_credits() == {}, 'Get credits is providing some output'
+
+    def test_case2_7(self, student_object):
+        student_object.add_credit('Python', 4.0)
+        assert student_object.get_credits() == {'Python': 4.0}, 'Get credits is not working'
 
     # def test_case2_8(self, student_object):
     #     assert student_object.get_credits() == {}, 'This will fail because the get credits will return '\
@@ -122,10 +123,4 @@ class Test_student:
 
     """ Using fixture factory """
     def test_case2_9(self, student_object_factory):
-        students = [student_object_factory('Veera', '1998/08/15', 'IT', ('Python', 4.0)),
-                    student_object_factory('Venkata', '1998/04/21', 'IT', ('Bash', 4.5)),
-                    student_object_factory('Lakshmi', '1998/05/12', 'IT', ('SQL', 4.3))]
-        print(students)
-        topper = get_topper(students)
-
-        assert topper == ('Venkata', 4.5), 'get_topper function is not working'
+        assert get_topper(students) == ('Venkata', 4.5), 'get_topper function is not working'
