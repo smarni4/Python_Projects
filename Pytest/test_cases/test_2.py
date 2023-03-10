@@ -111,7 +111,7 @@ class Test_student:
 
     def test_case2_6(self, student_object):
 
-        assert student_object.get_credits() == {}, 'Get credits is providing some output'
+        assert student_object.get_credits() == {'Python': 3.0}, 'credits is not equal to 3.0'
 
     def test_case2_7(self, student_object):
         student_object.add_credit('Python', 4.0)

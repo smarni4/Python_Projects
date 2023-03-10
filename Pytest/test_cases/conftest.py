@@ -50,9 +50,9 @@ def mock_response(monkeypatch):
 """
 
 
-@pytest.fixture(scope='class')
-def student_object():
-    s = Student('Veera', '1998/08/15', 'IT', ('Python', 3.0))
+@pytest.fixture(scope='class', params=[('Python', 2.9), ('Python', 4.0)], ids=["Fail", "Pass"])
+def student_object(request):    # Inbuilt request module & id's help to identify the test case
+    s = Student('Veera', '1998/08/15', 'IT', request.param)
     return s
 
 
