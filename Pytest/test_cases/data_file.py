@@ -1,6 +1,7 @@
 import json
 from datetime import date
 
+
 Database = {
     '1': ['Marni', 'A', '24', '56'],
     '2': ['Veera', 'B', '25', '60'],
@@ -40,6 +41,11 @@ class Student:
         return self.name
 
 
+students = [Student('Veera', '1998/08/15', 'IT', ('Python', 4.0)),
+            Student('Venkata', '199804/21', 'IT', ('Python', 4.5)),
+            Student('Lakshmi', '1998/05/12', 'IT', ('Python', 4.3))]
+
+
 def get_topper(students_list):
     score = 0.0
     stu_name = None
@@ -52,8 +58,11 @@ def get_topper(students_list):
     return stu_name, score
 
 
-students = [Student('Veera', '1998/08/15', 'IT', ('Python', 4.0)),
-            Student('Venkata', '199804/21', 'IT', ('Python', 4.5)),
-            Student('Lakshmi', '1998/05/12', 'IT', ('Python', 4.3))]
+def is_eligible_for_degree(func):
+    if func.courses['Python'] <= 20:
+        eligibility = False
+    else:
+        eligibility = True
 
-get_topper(students)
+    return eligibility
+

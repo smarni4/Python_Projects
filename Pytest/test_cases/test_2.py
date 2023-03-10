@@ -2,7 +2,7 @@ import json
 import os
 import pytest
 
-from data_file import save_dict, get_topper, students
+from data_file import save_dict, get_topper, students, is_eligible_for_degree
 
 """
 Pytest Fixture:
@@ -124,3 +124,10 @@ class Test_student:
     """ Using fixture factory """
     def test_case2_9(self, student_object_factory):
         assert get_topper(students) == ('Venkata', 4.5), 'get_topper function is not working'
+
+
+""" We can use a fixture as a param of fixture using the indirect function of the fixture. """
+@pytest.mark.parametrize("student_object, expected", [(('Python', 19), False), (('Python', 21), True)],
+                         indirect=['student_object'])
+def test_case2_10(student_object, expected):
+    assert is_eligible_for_degree(student_object) is expected
