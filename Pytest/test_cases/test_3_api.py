@@ -9,7 +9,8 @@ import random
 import pytest
 import requests
 import json
-
+import requests_mock
+from unittest import TestCase
 
 @pytest.mark.users
 @pytest.mark.parametrize("userid, first_name", [(7, 'Michael'), (8, 'Lindsay')])    # Runs test for the given two inputs
@@ -51,6 +52,8 @@ def get_joke():
         joke = 'No jokes'
     return joke
 
+
+print(get_joke())
 
 def len_joke():
     return len(get_joke())
