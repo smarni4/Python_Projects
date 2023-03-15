@@ -7,4 +7,3 @@ def fibonacci_series(n):
 
 for number in fibonacci_series(10):
     print(number)
-
