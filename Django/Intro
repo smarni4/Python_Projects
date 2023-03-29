@@ -1,0 +1,15 @@
+########### Django #############
+
+* Django is a Python backend web development framework.
+* offers built-in solutions and features for basically all problems. Customizable and extensible.
+* build production-ready websites.
+
+########### Installation and creating a project folder #########
+
+* To install Django run the command " pip3 install Django "
+* To start a project run the command in the desired folder "django-admin startproject {project_name} "
+* The above command will create manage.py and other required python files inside the sub-folder where you ran the above command.
+* To write and implement the python code we need to install a Integrated Development Tool such as Pycharm, Visual Studio Code. For this project I am using Pycharm.
+* Install an extension named Pylance which is a language server for Python.
+
+
