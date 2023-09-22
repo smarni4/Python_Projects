@@ -12,4 +12,65 @@
 * To write and implement the python code we need to install a Integrated Development Tool such as Pycharm, Visual Studio Code. For this project I am using Pycharm.
 * Install an extension named Pylance which is a language server for Python.
 
+########### To preview the website we can start a local server #########
 
+* Run the command " Python3 manage.py runserver " to start the local server in our system.
+* After running the above command you will see a link as output and installed successfully notification on the webpage once you clicked on that link.
+* The above command will also create a dummy database named such as db.sqlite3.
+* To stop the web server hit the ctrl+c.
+
+############ To start an app/feature of our project ##########################
+
+* Apps are also known as modules of the project.
+* Run the command " Python3 manage.py startapp {app_name} " inside the main folder.
+* In our scenario we are building a website to a food truck which is the project.
+* Processes such as displaying the items or order details, payment process are known as apps or features.
+* Apps generally heps to build the individual code for every app/feature in the project.
+* Once you run the above command it will create a sub-folder inside the project folder with required python files shown below.
+
+    -> Migrations folder:
+    -> __init__.py:
+    -> admin.py:
+    -> apps.py:
+    -> Models.py:
+    -> tests.py: Helps us with automated and unit test the app.
+    -> views.py: This is the file where we will write the code to what we want show to the users of the website.
+
+############## URL and Views ###################
+
+* URL is the general link that we search in the google search.
+* View is the logic that executes for different URLs. This may be a function or class that consists of the code which handles the requests and return responses.
+
+* To create a view or response to the request made by the user, we need to implement the views.py file inside the app folder.
+* To do so we need to import the HttpResponse from the django.http.
+
+* After that to run the function created in the views.py when the respective request is made by the user. We need to create a python file named urls.py inside the app folder.
+
+########### To create a view and link the function to the URL ##################
+
+* First create a function inside the views.py in the app folder with the code that return the HttpRequest as required.
+* Then create a urls.py function inside that app and link the function created in views.py to the keyword as shown in the urls.p file.
+* Then add the app path to the main project urls.py file using include().
+
+* To check the output, add the keywords given in the urls.py files to the url in the browser. For example in this case add /menu/items, which gives the output as "This works!"
+
+* To add multiple views, just add multiple functions inside the views.py file and add the respective paths inside urls.py under the app and main folder.
+
+########## To create a dynamic view and url #####################
+
+* To create a dynamic view and url we can add a new parameter inside the urls.py path between the <> as shown below.
+
+    -> In urls.py under app module.
+            -> urlpatterns = [
+                             path("<task>", views.task_desc)
+                             ]
+
+    -> In views.py under the app module.
+            -> def task_desc(requests, task):
+                    if task == "***":
+                        text = "****"
+                    elif task == "&&&":
+                        text = "&&&&"
+                    else:
+                        return HttpRequestNotFound
+                    return HttpRequest(text)
